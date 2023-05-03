@@ -9,11 +9,17 @@ a {
     font-size: larger;
 }
 
+h1 {
+    margin: 0;
+}
+
 body {
     margin: 0%;
     padding: 0%;
-    background-color: grey;
+    background-color: white;
 }
+
+
 
 .espacoApoioEmocional{
     margin-right: 7px;
@@ -106,3 +112,76 @@ body {
     width: 90%;
     height: 120px;
 }
+
+.texto1 h1 {
+    margin-top: 4%;
+    font-weight: lighter;
+    font-family: 'Inter', sans-serif;
+}
+
+.texto2 h1{
+    margin-top: 4%;
+    font-family: 'Inter', sans-serif;
+}
+
+.Fibonacci {
+    margin-top: 2%;
+}
+
+.Fibonacci img{
+    width: 450px;
+    height: 270px;
+}
+
+.pilares {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgsPilares {
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+.imgsPilares img{
+    width: 200px;
+    height: 200px;
+}
+
+.pilares span{
+    display: flex;
+    background-color: #D9D9D9;
+    width: 322px;
+    height: 289px;
+    border-radius: 40px;
+}
+
+.pilares h1{
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    font-weight: normal;
+    padding-top: 9%;
+    padding-left: 14%;
+    font-size:170%;
+}
+
+.container3 {
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.footer {
+    background-color: black;
+    margin-top: 5%;
+    height: 120px;
+}
+.footer h1{
+    padding-top: 2%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:x-large;
+    font-weight: lighter;
+}
+
