@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+
+
+
+
+
 a {
     font-family: 'Inter', sans-serif;
     color: white;
@@ -9,12 +18,14 @@ a {
 }
 
 body {
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
     margin: 0%;
     padding: 0%;
     background-color: grey;
     background-image: url(../imagens/alpes-suico.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navbar {
@@ -85,12 +96,68 @@ body {
     height: 120px;
 }
 
-.bloco {
+.containerCadastro {
     height: 630px;
     width: 754px;
-    position: absolute;
-    left: -50%;
-    top: 30%;
     border-radius: 58px;
+    background-color: white;
+    
+    display: flex;
+    
+    position: relative;
+    left: 30vw;
+    top: 9vh;
+
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.containerCadastro h1{
+    display: flex;
+    font-size: 500%;
+    margin: 0;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    font-weight: lighter;
+    font-family: 'Imperial Script', cursive;
+}
+
+.containerInputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInputs input[type="text"]{
+    margin: 2.3vh;
+    background-color: #F1EBEB;
+    border:  #F1EBEB;
+    border-radius: 12px;
+    font-size: 16px;
+    width: 548px;
+    height: 54px;
+
+}
+
+.containerInputs input[type="text"]::placeholder{
+    text-align: center;
+
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: grey;
+  }
+
+.botaoCadastro button{
+    background-color: black;
+    border-radius: 20px;
+    border: none;
     color: white;
+    width: 224px;
+    height: 57px;
+    margin-top: 7vh;
+    font-size: 200%;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
 }
