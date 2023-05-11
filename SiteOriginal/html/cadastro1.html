@@ -42,15 +42,30 @@
     </div>
     <!-- container de login -->
     <div class="containerCadastro">
-        <h1>Faça seu cadastro!</h1><br>
-        <div class="containerInputs">
-            <input type="text" id="input_nome" placeholder="Nome">
-            <input type="text" id="input_email" placeholder="email">
-            <input type="text" id="input_senha" placeholder="Senha">
-        </div>
-            <div class="botaoCadastro">
-                <button onclick="cadastrar()">Cadastrar</button>
+        <div class="titulo">
+            <h1>Faça seu cadastro!</h1>
+        </div><br>
+        <div class="CONTAINERINPUTS">
+            <div class="containerInputs">
+                <input type="text" id="input_nome" placeholder="Nome">
+                <input type="text" id="input_email" placeholder="email">
+                <input type="text" id="input_senha" placeholder="Senha">
+
             </div>
+
+            <div class="containerInputs2">
+                <input type="text" id="input_livro_favorito" placeholder="Livro favorito da Bíblia">
+                <div class="containerInputs3">
+                    <br>Esse site foi indicado por alguém? Se sim quem?
+                <input type="text" id="input_indicacao">
+                </div>
+            </div>
+        </div>
+        <div class="botaoCadastro">
+            <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+
     </div>
 </body>
 
@@ -65,6 +80,8 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+        var livroFavoritoVar = livro_input.value;
+        var indicacaoVar = indicacao_input.value;
         // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "") {
