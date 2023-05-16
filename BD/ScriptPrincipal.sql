@@ -25,5 +25,10 @@ CREATE TABLE moradas (
     primary key (idMoradas, fkUsuario)
 );
 
+alter table moradas add column local varchar(150);
+alter table moradas add column material varchar(150);
+alter table moradas add column carroGaragem varchar(150);
+
+desc moradas;
 desc usuario;
 select*from usuario;
