@@ -84,10 +84,12 @@ body {
 
 .conteudo {
     width: 700px;
-    margin-left: 7vw;
+    margin-left: 16vw;
+    margin-top: 4vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: left;
 }
 
 .conteudo .textos{
@@ -138,4 +140,18 @@ body {
     font-size: 200%;
     font-family: 'Inter', sans-serif;
     font-weight: lighter;
+}
+
+.conteudoTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.imagensCorrendo {
+    display: flex;
+    justify-content: right;
+    height: 86.576vh;
 }

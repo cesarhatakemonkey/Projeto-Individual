@@ -31,41 +31,49 @@
             </div>
         </div>
     </div>
-    <!-- esquerda -->
-    <div class="conteudo">
-        <div class="textos">
-            <h1>Calculadora da razão áurea</h1><br>
-            <span class="texto1">Insira as medidas do seu rosto<br> para verificar se a razão áurea<br> está próxima das
-                suas<br> dimensões!
-            </span>
+    <!-- conteudo da página -->
+    <div class="conteudoTotal">
+        <!-- esquerda -->
+        <div class="conteudo">
+            <div class="textos">
+                <h1>Calculadora da razão áurea</h1><br>
+                <span class="texto1">Insira as medidas do seu rosto<br> para verificar se a razão áurea<br> está próxima
+                    das
+                    suas<br> dimensões!
+                </span>
+            </div>
+            <div class="INPUTS">
+                <input type="number" id="input_X" placeholder="Medida X">
+                <input type="number" id="input_Y" placeholder="Medida Y">
+            </div>
+            <div class="botaoCalculo">
+                <button onclick="calcular()">Calcular</button>
+            </div>
         </div>
-        <div class="INPUTS">
-            <input type="number" id="input_X" placeholder="Medida X">
-            <input type="number" id="input_Y" placeholder="Medida Y"> 
-        </div>
-        <div class="botaoCalculo">
-            <button onclick="calcular()">Calcular</button>
+        <!-- direita -->
+        <div class="imagensCorrendo">
+            <img src="../imagens/medidas fibonacci.png" alt="Medidas do rosto">
         </div>
     </div>
 </body>
 
 </html>
 <script>
-    function calcular(){
+    function calcular() {
         var X = Number(input_X.value)
         var Y = Number(input_Y.value)
 
-        if(X<Y){
+        if (X < Y) {
             alert(`Os valores inseridos certamente estarão bem longe da razão áurea! Mas relaxa auto-estima é tudo!!!`)
         }
         else {
-            if(X/Y>1.50 && X/Y < 1.61){
-            alert(`A razão áurea é igual a 1,61... e as suas medidas são ${X/Y}, no mínimo você é belo igual a monaliza!`)
+            if (X / Y > 1.50 && X / Y < 1.61) {
+                alert(`A razão áurea é igual a 1,61... e as suas medidas são ${X / Y}, no mínimo você é belo igual a monaliza!`)
             }
-            else if(X/Y > 1.61 || X/Y == 1.61){
+            else if (X / Y > 1.61 || X / Y == 1.61) {
                 alert(`As suas medidas desafiam a razão áurea`)
             }
-            else if(X/Y < 1.50){
+            else if (X / Y < 1.50) {
                 alert(`Suas medidas estão um pouco abaixo da razão áurea`)
             }
         }
