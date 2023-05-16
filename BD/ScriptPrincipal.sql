@@ -11,10 +11,18 @@ CREATE DATABASE loveguy;
 USE loveguy;
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
+	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50),
+	livroFavorito varchar(50),
+    fkIndicado int
+);
+
+CREATE TABLE moradas (
+	idMoradas INT AUTO_INCREMENT,
+    fkUsuario int,
+    primary key (idMoradas, fkUsuario)
 );
 
 desc usuario;
