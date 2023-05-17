@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+a {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-decoration: none;
+    padding-right: 8px;
+    font-size: larger;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: grey;
+    background-image: url(../imagens/alpes-suico.jpg);
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    justify-content: right;
+    list-style: none;
+    display: flex;
+    margin-right: 4%;
+    margin-top: 2.8%;
+}
+
+.login {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 39%;
+    left: -1%;
+    display: flex;
+    justify-content: right;
+}
+
+.cadastro {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 39%;
+    left:-0.7%;
+    display: flex;
+    justify-content: right;
+}
+
+
+.logo {
+    display: flex;
+    width: 60px;
+    height: 70px;
+    margin-top: 26px;
+    justify-content: left;
+    margin-left: 30%;
+}
+
+.palito {
+    background-color: white;
+    position: relative;
+    top: 32%;
+    left: -2.8%;
+    height: 45px;
+    width: 3px;
+}
+
+.header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header .header-group {
+    width: 100vw;
+    height: 120px;
+    background-color: black;
+    margin: 0;
+    display: flex;
+}
+
+.header .container {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: 120px;
+}
