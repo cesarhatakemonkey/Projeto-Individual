@@ -11,7 +11,7 @@ function validarSessao() {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         b_usuario.innerHTML = nome;
 
-        // finalizarAguardar();
+        // // finalizar()Aguardar();
     } else {
         window.location = "../login.html";
     }
@@ -20,7 +20,7 @@ function validarSessao() {
 function limparSessao() {
     // aguardar();
     sessionStorage.clear();
-    // finalizarAguardar();
+    // // finalizar()Aguardar();
     window.location = "../login.html";
 }
 
@@ -30,17 +30,17 @@ function aguardar() {
     divAguardar.style.display = "flex";
 }
 
-function finalizarAguardar(texto) {
-    var divAguardar = document.getElementById("div_aguardar");
-    divAguardar.style.display = "none";
+// function // finalizar()Aguardar(texto) {
+//     var divAguardar = document.getElementById("div_aguardar");
+//     divAguardar.style.display = "none";
 
-    var divErrosLogin = document.getE
-    lementById("div_erros_login");
-    if (texto) {
-        divErrosLogin.style.display = "flex";
-        divErrosLogin.innerHTML = texto;
-    }
-}
+//     var divErrosLogin = document.getE
+//     lementById("div_erros_login");
+//     if (texto) {
+//         divErrosLogin.style.display = "flex";
+//         divErrosLogin.innerHTML = texto;
+//     }
+// }
 
 
 // modal

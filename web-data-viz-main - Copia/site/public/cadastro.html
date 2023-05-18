@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cadastro</title>
+    <title>LoveGuy | Cadastro</title>
 
 
     <script src="./js/funcoes.js"></script>
@@ -24,7 +24,7 @@
     <!-- header -->
     <div class="header">
         <div class="header-group">
-            <a href="index.html"><img src="../imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
             <div class="container">
                 <ul class="navbar">
                     <span class="espacoApoioEmocional">
@@ -60,6 +60,12 @@
                 <input type="text" id="input_indicacao">
                 </div>
             </div>
+
+            <!-- <div class="containerInputs4">
+                <input type="text" id="input_local" placeholder="Local da sua casa no céu">
+                <input type="text" id="input_material" placeholder="Material da sua casa no céu">
+                <input type="text" id="input_carro" placeholder="Carro na garagem da casa no céu">
+            </div> -->
         </div>
         <div class="botaoCadastro">
             <button onclick="cadastrar()">Cadastrar</button>
@@ -73,26 +79,30 @@
 
 <script>
     function cadastrar() {
-        aguardar();
+        // // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome_input.value;
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var nomeVar = input_nome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var livroVar = input_livro_favorito.value;
+        var indicadoVar = input_indicacao.value;
+        // var localVar = input_local.value;
+        // var materialVar = input_material.value;
+        // var carroVar = input_carro.value;
+        // Fazer a verificação aqui 
+        /* if (nomeVar == "" || emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-            finalizarAguardar();
-            return false;
+            // // finalizar()// aguardar();
+            // return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
-        }
-
+            // setInterval(sumirMensagem, 5000)
+        } */
+        window.location = "index.html"
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -104,36 +114,37 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                livroServer: livroVar,
+                indicadoServer: indicadoVar,
+                // localServer: localVar,
+                // materialServer: materialVar,
+                // carroServer: carroVar
             })
-        }).then(function (resposta) {
+        })
+        }
+        // .then(function (resposta) {
 
-            console.log("resposta: ", resposta);
+        //     console.log("resposta: ", resposta);
 
-            if (resposta.ok) {
-                cardErro.style.display = "block";
+        //     if (resposta.ok) {
+        //         cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+        //         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
+        //         setTimeout(() => {
+        //             window.location = "login.html";
+        //         }, "2000")
 
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
+        //         limparFormulario();
+        //         // finalizar()// aguardar();
+        //     } else {
+        //         throw ("Houve um erro ao tentar realizar o cadastro!");
+        //     }
+        // }).catch(function (resposta) {
+        //     console.log(`#ERRO: ${resposta}`);
+        //     // finalizar()// aguardar();
+        // });
 
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
+        // return false;
 </script>

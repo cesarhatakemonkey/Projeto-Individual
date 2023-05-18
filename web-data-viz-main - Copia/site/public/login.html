@@ -10,7 +10,7 @@
 
     <script src="./js/funcoes.js"></script>
 
-    <link rel="icon" href="../imagens/whitecross-removebg-preview.png">
+    <link rel="icon" href="./imagens/whitecross-removebg-preview.png">
     <link rel="stylesheet" href="../css/StyleLogin.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -57,7 +57,7 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -65,7 +65,7 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            // finalizar()// aguardar();
             return false;
         }
         else {
@@ -110,7 +110,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    // finalizar()Aguardar(texto);
                 });
             }
 
