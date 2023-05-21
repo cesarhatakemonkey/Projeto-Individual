@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleMetrycs.css">
+    <title>LoveGuy | Metrycs</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header-group">
+            <div class="header-esqueda">
+                <span></span>
+                <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            </div>
+            <div class="container">
+                <ul class="navbar">
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./index.html">home</a></li>
+                    </span>
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./apoioEmocional.html">apoio emocional</a></li>
+                    </span>
+                    <li><a href="./FaleConosco.html">fale conosco</a></li>
+                </ul>
+                <span class="palito"></span>
+                <span class="login"><a href="./Login.html">Login</a></span>
+                <span class="cadastro"><a href="./Cadastro.html">Cadastro</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- corpo -->
+    <div class="conteudo">
+        <div class="graficosEsquerda">
+            <div class="graficoBarras">
+                <canvas id="myChart"></canvas>
+
+            </div>
+            <div class="graficoLinhas">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+        <div class="graficosDireita">
+            <div class="graficoRosca">
+                <canvas id="myChart3"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('myChart2');
+
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                backgroundColor: 'rgb(0, 99, 132)',
+                borderColor: 'rgb(0, 99, 132)',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx3 = document.getElementById('myChart3');
+
+    new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Cristãos', 'Outras religiões'],
+            datasets: [{
+                backgroundColor: ['rgb(0, 99, 140)', 'rgb(0, 99, 90)'],
+                borderColor: 'rgb(0, 0, 0)',
+                data: [86.8, 15.2],
+                borderWidth: 1
+            }]
+        },
+    });
+</script>

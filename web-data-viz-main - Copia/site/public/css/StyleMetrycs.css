@@ -11,8 +11,8 @@ a {
 body {
     margin: 0%;
     padding: 0%;
-    background-color: grey;
-    background-image: url(../imagens/alpes-suico.jpg);
+    background-color: white;
+    
 }
 
 .navbar {
@@ -81,4 +81,39 @@ body {
     margin: auto;
     width: 90%;
     height: 120px;
+}
+
+.graficoBarras {
+    width: 70vh;
+}
+
+.graficoLinhas {
+    margin-top: 8vh;
+    width: 70vh;
+}
+
+.conteudo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.graficosEsquerda{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 16vw;
+    top: 3vh;
+}
+
+.graficosDireita{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 24vw;
+    top: 15vh;
+}
+
+.graficoRosca {
+    width: 50vh;
 }
