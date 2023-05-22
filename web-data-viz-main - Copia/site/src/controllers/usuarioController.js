@@ -109,52 +109,53 @@ function cadastrar(req, res) {
     }
 }
 
-// function cadastrar1(req, res) {
-//     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-//     var local = req.body.localServer;
-//     var material = req.body.materialServer;
-//     var carroGaragem = req.body.carroServer
+function cadastrar1(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var local = req.body.localServer;
+    var material = req.body.materialServer;
+    var carroGaragem = req.body.carroServer
 
-//     //             nomeServer: nomeVar,
-//     //             emailServer: emailVar,
-//     //             senhaServer: senhaVar,
-//     //             livroServer: livroVar,
-//     //             indicacaoServer: indicacaoVar,
-//     //             localServer: localVar,
-//     //             materialServer: materialVar,
-//     //             carroVar: carroVar
+    //             nomeServer: nomeVar,
+    //             emailServer: emailVar,
+    //             senhaServer: senhaVar,
+    //             livroServer: livroVar,
+    //             indicacaoServer: indicacaoVar,
+    //             localServer: localVar,
+    //             materialServer: materialVar,
+    //             carroVar: carroVar
 
-//     // Faça as validações dos valores
-//     if (local == undefined) {
-//         res.status(400).send("Seu local está undefined!");
-//     } else if (material == undefined) {
-//         res.status(400).send("Seu material está undefined!");
-//     } else if (carroGaragem == undefined) {
-//         res.status(400).send("Seu carroGaragem está undefined!");
-//     } else {
+    // Faça as validações dos valores
+    if (local == undefined) {
+        res.status(400).send("Seu local está undefined!");
+    } else if (material == undefined) {
+        res.status(400).send("Seu material está undefined!");
+    } else if (carroGaragem == undefined) {
+        res.status(400).send("Seu carroGaragem está undefined!");
+    } else {
         
-//         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-//         usuarioModel.cadastrar1(local, material, carroGaragem)
-//             .then(
-//                 function (resultado) {
-//                     res.json(resultado);
-//                 }
-//             ).catch(
-//                 function (erro) {
-//                     console.log(erro);
-//                     console.log(
-//                         "\nHouve um erro ao realizar o cadastro! Erro: ",
-//                         erro.sqlMessage
-//                     );
-//                     res.status(500).json(erro.sqlMessage);
-//                 }
-//             );
-//     }
-// }
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar1(local, material, carroGaragem)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
 
 module.exports = {
     entrar,
     cadastrar,
+    cadastrar1,
     listar,
     testar
 }

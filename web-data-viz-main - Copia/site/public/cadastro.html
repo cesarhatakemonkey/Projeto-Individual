@@ -61,11 +61,11 @@
                 </div>
             </div>
 
-            <!-- <div class="containerInputs4">
+            <div class="containerInputs4">
                 <input type="text" id="input_local" placeholder="Local da sua casa no céu">
                 <input type="text" id="input_material" placeholder="Material da sua casa no céu">
                 <input type="text" id="input_carro" placeholder="Carro na garagem da casa no céu">
-            </div> -->
+            </div>
         </div>
         <div class="botaoCadastro">
             <button onclick="cadastrar()">Cadastrar</button>
@@ -120,6 +120,52 @@
                 // localServer: localVar,
                 // materialServer: materialVar,
                 // carroServer: carroVar
+            })
+        })
+        }
+
+        function cadastrar1() {
+        // // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        // var nomeVar = input_nome.value;
+        // var emailVar = input_email.value;
+        // var senhaVar = input_senha.value;
+        // var livroVar = input_livro_favorito.value;
+        // var indicadoVar = input_indicacao.value;
+        var localVar = input_local.value;
+        var materialVar = input_material.value;
+        var carroVar = input_carro.value;
+        // Fazer a verificação aqui 
+        /* if (nomeVar == "" || emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            // // finalizar()// aguardar();
+            // return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
+        } */
+        window.location = "index.html"
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar1", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                // nomeServer: nomeVar,
+                // emailServer: emailVar,
+                // senhaServer: senhaVar,
+                // livroServer: livroVar,
+                // indicadoServer: indicadoVar,
+                localServer: localVar,
+                materialServer: materialVar,
+                carroServer: carroVar
             })
         })
         }
