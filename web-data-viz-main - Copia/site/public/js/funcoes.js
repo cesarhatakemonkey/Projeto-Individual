@@ -54,3 +54,5 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
+/////////////////////////////Minha área/////////////////////////////////// 
+
