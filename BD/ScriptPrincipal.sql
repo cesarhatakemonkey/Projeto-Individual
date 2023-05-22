@@ -21,17 +21,16 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE moradas (
-	idMoradas INT AUTO_INCREMENT,
-    fkUsuario int auto_increment,
-    primary key (idMoradas, fkUsuario)
+    fkUsuario int primary key auto_increment,
+    local varchar(150),
+    material varchar(150),
+    carroGaragem varchar(150)
 );
-
-alter table moradas add column local varchar(150);
-alter table moradas add column material varchar(150);
-alter table moradas add column carroGaragem varchar(150);
 
 desc moradas;
 desc usuario;
 truncate table usuario;
+truncate table moradas;
 select*from usuario;
 select*from moradas;
+
