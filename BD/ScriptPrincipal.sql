@@ -22,7 +22,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE moradas (
 	idMoradas INT AUTO_INCREMENT,
-    fkUsuario int,
+    fkUsuario int auto_increment,
     primary key (idMoradas, fkUsuario)
 );
 
@@ -32,4 +32,6 @@ alter table moradas add column carroGaragem varchar(150);
 
 desc moradas;
 desc usuario;
+truncate table usuario;
 select*from usuario;
+select*from moradas;
