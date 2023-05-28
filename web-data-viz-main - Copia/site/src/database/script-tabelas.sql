@@ -20,12 +20,10 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE moradas (
-	idMoradas INT AUTO_INCREMENT,
-    fkUsuario INT AUTO_INCREMENT,
+    fkUsuario INT primary key auto_increment,
 	local varchar(150),
 	material varchar(150),
-	carroGaragem varchar(150),
-    primary key (idMoradas, fkUsuario)
+	carroGaragem varchar(150)
 );
 
 alter table moradas add column local varchar(150);
@@ -35,3 +33,7 @@ alter table moradas add column carroGaragem varchar(150);
 desc moradas;
 desc usuario;
 select*from usuario;
+truncate usuario;
+
+insert into usuario (nome) values
+('jose');
