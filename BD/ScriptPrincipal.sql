@@ -17,6 +17,8 @@ CREATE TABLE usuario (
 	email VARCHAR(50),
 	senha VARCHAR(50),
 	livroFavorito varchar(50),
+    novoTestamento char(1),
+    velhoTestamento char(1),
     fkIndicado int
 );
 
@@ -33,4 +35,4 @@ truncate table usuario;
 truncate table moradas;
 select*from usuario;
 select*from moradas;
-
+drop table usuario, moradas;

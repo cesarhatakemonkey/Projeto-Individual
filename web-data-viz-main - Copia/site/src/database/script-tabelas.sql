@@ -16,7 +16,8 @@ CREATE TABLE usuario (
 	email VARCHAR(50),
 	senha VARCHAR(50),
 	livroFavorito varchar(50),
-    testamento char(1),
+    novoTestamento char(1),
+	velhoTestamento char(1),
     fkIndicado int
 );
 
