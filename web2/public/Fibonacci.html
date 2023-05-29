@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../imagens/whitecross-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/StyleFibonacci.css">
+    <title>LoveGuy | Razão Áurea</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header-group">
+            <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            <div class="container">
+                <ul class="navbar">
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./index.html">home</a></li>
+                    </span>
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./apoioEcomcional.html">apoio emocional</a></li>
+                    </span>
+                    <li><a href="./FaleConosco.html">fale conosco</a></li>
+                </ul>
+                <span class="palito"></span>
+                <span class="login"><a href="./Login.html">Login</a></span>
+                <span class="cadastro"><a href="./Cadastro.html">Cadastro</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- conteudo da página -->
+    <div class="conteudoTotal">
+        <!-- esquerda -->
+        <div class="conteudo">
+            <div class="textos">
+                <h1>Calculadora da razão áurea</h1><br>
+                <span class="texto1">Insira as medidas do seu rosto<br> para verificar se a razão áurea<br> está próxima
+                    das
+                    suas<br> dimensões!
+                </span>
+            </div>
+            <div class="INPUTS">
+                <input type="number" id="input_X" placeholder="Medida X">
+                <input type="number" id="input_Y" placeholder="Medida Y">
+            </div>
+            <div class="botaoCalculo">
+                <button onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+        <!-- direita -->
+        <div class="imagensCorrendo">
+            <img src="../imagens/medidas fibonacci.png" alt="Medidas do rosto">
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var X = Number(input_X.value)
+        var Y = Number(input_Y.value)
+
+        if (X < Y) {
+            alert(`A razão áurea é igual a 1,61...! E o resultado é ${X/Y}`)
+        }
+        else {
+            if (X / Y > 1.50 && X / Y < 1.61) {
+                alert(`A razão áurea é igual a 1,61... e as suas medidas são ${X / Y}, no mínimo você é belo igual a monaliza!`)
+            }
+            else if (X / Y > 1.61 || X / Y == 1.61) {
+                alert(`A razão áurea é igual a 1,61, e a sua medida é ${X/Y}`)
+            }
+            else if (X / Y < 1.50) {
+                alert(`A razão áurea é igual a 1,61, e sua medida é ${X/Y}`)
+            }
+        }
+    }
+</script>

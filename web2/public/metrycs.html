@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleMetrycs.css">
+    <title>LoveGuy | Metrycs</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header-group">
+            <div class="header-esqueda">
+                <span></span>
+                <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            </div>
+            <div class="container">
+                <ul class="navbar">
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./index.html">home</a></li>
+                    </span>
+                    <!-- <span class="espacoApoioEmocional">
+                        <li><a href="./apoioEmocional.html">apoio emocional</a></li>
+                    </span> -->
+                    <li><a href="./usuario.html">usuário</a></li>
+                    <span class="palito"></span>
+                <span class="login"><a href="./Login.html">Log-off</a></span>
+                </ul>
+                
+                <!-- <span class="cadastro"><a href="./Cadastro.html">Cadastro</a></span> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- corpo -->
+    <div class="conteudo">
+        <div class="graficosEsquerda">
+            <strong><i>Veja qual é o testamento preferido dos usuários desse site</i></strong>
+            <div class="graficoBarras">
+                <canvas id="myChart"></canvas>
+            </div>
+
+        </div>
+        <div class="graficosDireita">
+            <div class="graficoRosca">
+                <canvas id="myChart3"></canvas>
+            </div>
+            <strong><i>O Brasil ainda tem muitos cristãos comparado com o resto do mundo!</i></strong>
+        </div>
+        <div class="textoBotao">
+            Abaixo há um botão “Mostrar”, que ao ser clicado será exibido abaixo dele diversos<br> versos biblicos do
+            tema selecionado<br><br><select name="select_tema" id="select_tema">
+                <option value="amor">Versos sobre amor</option>
+                <option value="tristeza">Versos sobre tristeza</option>
+                <option value="coragem">Versos sobre coragem</option>
+            </select><br>
+            <button onclick="mostrarVersos()">Mostrar</button><br>
+            <span id="span_mensagem"></span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    versosAmor = ['O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta. 1 Coríntios 13:4-7', 'Nem muitas águas conseguemapagar o amor; os rios não conseguem levá-lo na correnteza. Se alguém oferecesse todas as riquezas da sua casa para adquirir o amor, seria totalmente desprezado. Cânticos 8:7']
+    versosTristeza = ['Porque sou eu que conheço os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de causar dano, planos de dar a vocês esperança e um futuro. Jeremias 29:11', 'O Senhor é a minha luz e a minha salvação; de quem terei temor? O Senhor é o meu forte refúgio; de quem terei medo? Salmos 27:1']
+    versosCoragem = ['Sejam fortes e corajosos. Não tenham medo nem fiquem apavorados por causa delas, pois o Senhor, o seu Deus, vai com vocês; nunca os deixará, nunca os abandonará". Deuteronômio 31:6', 'Não fui eu que ordenei a você? Seja forte e corajoso! Não se apavore nem desanime, pois o Senhor, o seu Deus, estará com você por onde você andar". Josué 1:9']
+
+
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Novo Testamento', 'Velho Testamento'],
+            datasets: [{
+                label: 'Livros preferidos',
+                backgroundColor: ['rgb(0, 99, 140)', 'rgb(0, 99, 90)'],
+                data: [8, 5, 10],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx3 = document.getElementById('myChart3');
+
+    new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Cristãos', 'Outras religiões'],
+            datasets: [{
+                backgroundColor: ['rgb(0, 99, 140)', 'rgb(0, 99, 90)'],
+                borderColor: 'rgb(0, 0, 0)',
+                data: [86.8, 15.2],
+                borderWidth: 1
+            }]
+        },
+    });
+
+    function mostrarVersos() {
+        span_mensagem.innerHTML = ''
+         
+        var select = select_tema.value
+
+        if (select == 'amor') {
+            for (var contadorAmor = 0; contadorAmor < versosAmor.length; contadorAmor += 1) {
+                span_mensagem.innerHTML += `${contadorAmor + 1}. ${versosAmor[contadorAmor]}`
+            }
+        }
+        else if (select == 'tristeza'){
+            while(contadorTristeza < versosTristeza.lenght){
+                span_mensagem.innerHTML += `${contadorTristeza + 1}. ${versosTristeza[contadorTristeza]}`
+                contadorTristeza++
+            }
+        }
+        else if (select == 'coragem'){
+            for (var contadorCoragem = 0; contadorCoragem < versosAmor.length; contadorCoragem += 1) {
+                span_mensagem.innerHTML += `${contadorCoragem + 1}. ${versosAmor[contadorCoragem]}`
+            }
+        }
+    }
+</script>
