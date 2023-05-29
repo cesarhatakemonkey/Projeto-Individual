@@ -94,6 +94,7 @@ body {
     margin: auto;
     width: 90%;
     height: 120px;
+    justify-self: right;
 }
 
 .containerCadastro {
