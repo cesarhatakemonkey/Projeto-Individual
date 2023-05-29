@@ -27,9 +27,9 @@
                     </span> -->
                     <li><a href="./usuario.html">usuário</a></li>
                     <span class="palito"></span>
-                <span class="login"><a href="./Login.html">Log-off</a></span>
+                    <span class="login"><a href="./Login.html">Log-off</a></span>
                 </ul>
-                
+
                 <!-- <span class="cadastro"><a href="./Cadastro.html">Cadastro</a></span> -->
             </div>
         </div>
@@ -50,16 +50,19 @@
             </div>
             <strong><i>O Brasil ainda tem muitos cristãos comparado com o resto do mundo!</i></strong>
         </div>
-        <div class="textoBotao">
-            Abaixo há um botão “Mostrar”, que ao ser clicado será exibido abaixo dele diversos<br> versos biblicos do
-            tema selecionado<br><br><select name="select_tema" id="select_tema">
-                <option value="amor">Versos sobre amor</option>
-                <option value="tristeza">Versos sobre tristeza</option>
-                <option value="coragem">Versos sobre coragem</option>
-            </select><br>
-            <button onclick="mostrarVersos()">Mostrar</button><br>
-            <span id="span_mensagem"></span>
-        </div>
+        <center>
+            <div class="textoBotao">
+                Abaixo há um botão “Mostrar”, que ao ser clicado será exibido abaixo dele diversos<br> versos biblicos
+                do
+                tema selecionado<br><br><select name="select_tema" id="select_tema">
+                    <option value="amor">Versos sobre amor</option>
+                    <option value="tristeza">Versos sobre tristeza</option>
+                    <option value="coragem">Versos sobre coragem</option>
+                </select><br>
+                <button onclick="mostrarVersos()">Mostrar</button><br>
+                <span id="span_mensagem"></span>
+            </div>
+        </center>
     </div>
 </body>
 
@@ -111,23 +114,24 @@
 
     function mostrarVersos() {
         span_mensagem.innerHTML = ''
-         
+
         var select = select_tema.value
 
         if (select == 'amor') {
             for (var contadorAmor = 0; contadorAmor < versosAmor.length; contadorAmor += 1) {
-                span_mensagem.innerHTML += `${contadorAmor + 1}. ${versosAmor[contadorAmor]}`
+                span_mensagem.innerHTML += `${contadorAmor + 1}. ${versosAmor[contadorAmor]}<br>`
             }
         }
-        else if (select == 'tristeza'){
-            while(contadorTristeza < versosTristeza.lenght){
-                span_mensagem.innerHTML += `${contadorTristeza + 1}. ${versosTristeza[contadorTristeza]}`
+        else if (select == 'tristeza') {
+            var contadorTristeza = 0
+            while (contadorTristeza < versosTristeza.length) {
+                span_mensagem.innerHTML += `${contadorTristeza + 1}. ${versosTristeza[contadorTristeza]}<br>`
                 contadorTristeza++
             }
         }
-        else if (select == 'coragem'){
+        else if (select == 'coragem') {
             for (var contadorCoragem = 0; contadorCoragem < versosAmor.length; contadorCoragem += 1) {
-                span_mensagem.innerHTML += `${contadorCoragem + 1}. ${versosAmor[contadorCoragem]}`
+                span_mensagem.innerHTML += `${contadorCoragem + 1}. ${versosAmor[contadorCoragem]}<br>`
             }
         }
     }
