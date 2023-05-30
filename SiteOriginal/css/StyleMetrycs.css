@@ -5,16 +5,44 @@ a {
     color: white;
     text-decoration: none;
     font-size: larger;
-    
+}
+
+h1 {
+    margin: 0;
 }
 
 body {
     margin: 0%;
     padding: 0%;
     background-color: white;
-    
 }
 
+
+
+.espacoApoioEmocional{
+    margin-right: 7px;
+}
+
+.banner {
+    background-size: cover;
+    background-image: url(https://tm.ibxk.com.br/2021/04/08/08163059787291.jpg?ims=1120x420);
+    height: 400px;
+}
+
+.banner h1{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: white;
+    text-align: left;
+    position: absolute;
+    left: 77%;
+    top: 24%;
+    font-weight: 400;
+    font-size: 350%;
+}
+
+
+/* BARRA DE NAVEGAÇÃO */
 .navbar {
     width: 100%;
     height: auto;
@@ -22,19 +50,18 @@ body {
     list-style: none;
     display: flex;
     margin-right: 4%;
-    margin-top: 2.8%;
-    display: flex;
-    flex-direction: row;
+    margin-top: 2.7%;
 }
 
 .login {
-    width: auto;
+    width: 5%;
     height: auto;
     position: relative;
     top: 39%;
-    left: -1%;
+    left: -2%;
     display: flex;
     justify-content: right;
+    
 }
 
 .cadastro {
@@ -80,7 +107,7 @@ body {
 
 .header .container {
     display: flex;
-    margin: auto;
+    margin: 0;
     width: 100%;
     height: 120px;
 }
@@ -127,7 +154,7 @@ body {
     padding-bottom: 3vh;
 }
 
-.textoBotao{
+ .textoBotao{
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,11 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 a {
     font-family: 'Inter', sans-serif;
     color: white;
     text-decoration: none;
-    padding-right: 8px;
     font-size: larger;
 }
 
@@ -52,17 +50,18 @@ body {
     list-style: none;
     display: flex;
     margin-right: 4%;
-    margin-top: 2.8%;
+    margin-top: 2.7%;
 }
 
 .login {
-    width: auto;
+    width: 5%;
     height: auto;
     position: relative;
     top: 39%;
-    left: -1%;
+    left: -2%;
     display: flex;
     justify-content: right;
+    
 }
 
 .cadastro {
@@ -99,7 +98,7 @@ body {
 }
 
 .header .header-group {
-    width: 100vw;
+    width: 100%;
     height: 120px;
     background-color: black;
     margin: 0;
@@ -108,80 +107,7 @@ body {
 
 .header .container {
     display: flex;
-    margin: auto;
-    width: 90%;
+    margin: 0;
+    width: 100%;
     height: 120px;
 }
-
-.texto1 h1 {
-    margin-top: 4%;
-    font-weight: lighter;
-    font-family: 'Inter', sans-serif;
-}
-
-.texto2 h1{
-    margin-top: 4%;
-    font-family: 'Inter', sans-serif;
-}
-
-.Fibonacci {
-    margin-top: 2%;
-}
-
-.Fibonacci img{
-    width: 450px;
-    height: 270px;
-}
-
-.pilares {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.imgsPilares {
-    width: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2%;
-}
-
-.imgsPilares img{
-    width: 200px;
-    height: 200px;
-}
-
-.pilares span{
-    display: flex;
-    background-color: #D9D9D9;
-    width: 322px;
-    height: 289px;
-    border-radius: 40px;
-}
-
-.pilares h1{
-    font-family: 'Inter', sans-serif;
-    text-align: left;
-    font-weight: normal;
-    padding-top: 9%;
-    padding-left: 14%;
-    font-size:170%;
-}
-
-.container3 {
-    margin-top: 5%;
-    margin-bottom: 6%;
-}
-
-.footer {
-    background-color: black;
-    margin-top: 5%;
-    height: 120px;
-}
-.footer h1{
-    padding-top: 2%;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size:x-large;
-    font-weight: lighter;
-}
-
