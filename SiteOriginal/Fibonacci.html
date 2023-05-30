@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/StyleFibonacci.css">
-    <title>Razão Áurea</title>
+    <link rel="stylesheet" href="./css/StyleFibonacci.css">
+    <title>LoveGuy | Razão Áurea</title>
 </head>
 
 <body>
     <!-- header -->
     <div class="header">
         <div class="header-group">
-            <a href="index.html"><img src="../imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
             <div class="container">
                 <ul class="navbar">
                     <span class="espacoApoioEmocional">
@@ -52,7 +52,7 @@
         </div>
         <!-- direita -->
         <div class="imagensCorrendo">
-            <img src="../imagens/medidas fibonacci.png" alt="Medidas do rosto">
+            <img src="./imagens/medidas fibonacci.png" alt="Medidas do rosto">
         </div>
     </div>
 </body>
@@ -64,17 +64,17 @@
         var Y = Number(input_Y.value)
 
         if (X < Y) {
-            alert(`Os valores inseridos certamente estarão bem longe da razão áurea! E o resultado é ${X/Y}`)
+            alert(`A razão áurea é igual a 1,61...! E o resultado é ${X/Y}`)
         }
         else {
             if (X / Y > 1.50 && X / Y < 1.61) {
                 alert(`A razão áurea é igual a 1,61... e as suas medidas são ${X / Y}, no mínimo você é belo igual a monaliza!`)
             }
             else if (X / Y > 1.61 || X / Y == 1.61) {
-                alert(`As suas medidas desafiam a razão áurea`)
+                alert(`A razão áurea é igual a 1,61, e a sua medida é ${X/Y}`)
             }
             else if (X / Y < 1.50) {
-                alert(`Suas medidas estão um pouco abaixo da razão áurea`)
+                alert(`A razão áurea é igual a 1,61, e sua medida é ${X/Y}`)
             }
         }
     }

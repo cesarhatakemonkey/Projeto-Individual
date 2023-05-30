@@ -1,10 +1,11 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 a {
     font-family: 'Inter', sans-serif;
     color: white;
     text-decoration: none;
+    padding-right: 8px;
     font-size: larger;
 }
 
@@ -51,18 +52,17 @@ body {
     list-style: none;
     display: flex;
     margin-right: 4%;
-    margin-top: 2.7%;
+    margin-top: 2.8%;
 }
 
 .login {
-    width: 5%;
+    width: auto;
     height: auto;
     position: relative;
     top: 39%;
-    left: -2%;
+    left: -1%;
     display: flex;
     justify-content: right;
-    
 }
 
 .cadastro {
@@ -99,7 +99,7 @@ body {
 }
 
 .header .header-group {
-    width: 100%;
+    width: 100vw;
     height: 120px;
     background-color: black;
     margin: 0;
@@ -108,8 +108,8 @@ body {
 
 .header .container {
     display: flex;
-    margin: 0;
-    width: 100%;
+    margin: auto;
+    width: 90%;
     height: 120px;
 }
 
