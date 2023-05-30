@@ -22,7 +22,7 @@
     <!-- header -->
     <div class="header">
         <div class="header-group">
-            <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            <a href=""><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
             <div class="container">
                 <span class="login"><a href="./Cadastro.html">Cadastro</a></span>
             </div>
@@ -39,6 +39,10 @@
                 <button onclick="entrar()">Entrar</button>
             </div>
     </div>
+    <!-- <div class="footer">
+        <h1>cesar.bmartins@sptech.school<br><img style="width: 20px; height: 20px;"
+                src="./imagens/telefone-removebg-preview.png">+55 (11) 99205-8813</h1>
+    </div> -->
 </body>
 
 </html>
@@ -52,7 +56,7 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
+        if (emailVar == "" || senhaVar == "") { 
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             // finalizar()// aguardar();

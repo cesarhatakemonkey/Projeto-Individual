@@ -25,11 +25,11 @@ body {
 }
 
 .login {
-    width: auto;
+    width: 100px;
     height: auto;
     position: relative;
     top: 39%;
-    left: -1%;
+    left: -1.8%;
     display: flex;
     justify-content: right;
 }
@@ -154,4 +154,17 @@ body {
     display: flex;
     justify-content: right;
     height: 86.576vh;
+}
+
+.footer {
+    background-color: black;
+    margin-top: 5%;
+    height: 120px;
+}
+.footer h1{
+    padding-top: 2%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:x-large;
+    font-weight: lighter;
 }

@@ -47,22 +47,24 @@
             </div>
         </div>
 
-    <!-- corpo -->
-    <div class="conteudo">
-        <div class="graficosEsquerda">
-            <strong><i>Veja qual é o testamento preferido dos usuários desse site</i></strong>
-            <div class="graficoBarras">
-                <canvas id="myChart"></canvas>
+        <!-- corpo -->
+        <div class="conteudo">
+            <div class="graficos">
+                <div class="graficosEsquerda">
+                    <strong><i>Veja qual é o testamento preferido dos usuários desse site</i></strong>
+                    <div class="graficoBarras">
+                        <canvas id="myChart"></canvas>
+                    </div>
+
+                </div>
+                <div class="graficosDireita">
+                    <div class="graficoRosca">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <strong><i>O Brasil ainda tem muitos cristãos comparado com o resto do mundo!</i></strong>
+                </div>
             </div>
 
-        </div>
-        <div class="graficosDireita">
-            <div class="graficoRosca">
-                <canvas id="myChart3"></canvas>
-            </div>
-            <strong><i>O Brasil ainda tem muitos cristãos comparado com o resto do mundo!</i></strong>
-        </div>
-        <center>
             <div class="textoBotao">
                 Abaixo há um botão “Mostrar”, que ao ser clicado será exibido abaixo dele diversos<br> versos biblicos
                 do
@@ -72,10 +74,13 @@
                     <option value="coragem">Versos sobre coragem</option>
                 </select><br>
                 <button onclick="mostrarVersos()">Mostrar</button><br>
-                <span id="span_mensagem"></span>
+                <span class="span_mensagem" id="span_mensagem"></span>
             </div>
-        </center>
-    </div>
+        </div>
+        <!-- <div class="footer">
+            <h1>cesar.bmartins@sptech.school<br><img style="width: 20px; height: 20px;"
+                    src="./imagens/telefone-removebg-preview.png">+55 (11) 99205-8813</h1>
+        </div> -->
 </body>
 
 </html>
