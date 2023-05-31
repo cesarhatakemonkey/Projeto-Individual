@@ -185,3 +185,15 @@ body {
     font-weight: lighter;
 }
 
+.footer {
+    background-color: black;
+    margin-top: 5%;
+    height: 120px;
+}
+.footer h1{
+    padding-top: 2%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:x-large;
+    font-weight: lighter;
+}

@@ -11,7 +11,7 @@
     <script src="./js/funcoes.js"></script>
 
     <link rel="icon" href="./imagens/whitecross-removebg-preview.png">
-    <link rel="stylesheet" href="../css/StyleLogin.css">
+    <link rel="stylesheet" href="./css/StyleLogin.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -22,7 +22,7 @@
     <!-- header -->
     <div class="header">
         <div class="header-group">
-            <a href="index.html"><img src="../imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            <a href=""><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
             <div class="container">
                 <span class="login"><a href="./Cadastro.html">Cadastro</a></span>
             </div>
@@ -39,6 +39,10 @@
                 <button onclick="entrar()">Entrar</button>
             </div>
     </div>
+    <!-- <div class="footer">
+        <h1>cesar.bmartins@sptech.school<br><img style="width: 20px; height: 20px;"
+                src="./imagens/telefone-removebg-preview.png">+55 (11) 99205-8813</h1>
+    </div> -->
 </body>
 
 </html>
@@ -52,7 +56,7 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
+        if (emailVar == "" || senhaVar == "") { 
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             // finalizar()// aguardar();

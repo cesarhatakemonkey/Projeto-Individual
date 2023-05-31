@@ -34,16 +34,15 @@ body {
     justify-content: right;
     list-style: none;
     display: flex;
-    margin-right: 4%;
-    margin-top: 2.8%;
+    
 }
 
 .login {
     width: auto;
     height: auto;
     position: relative;
-    top: 39%;
-    left: -1%;
+    top: 41%;
+    left: -3%;
     display: flex;
     justify-content: right;
 }
@@ -91,10 +90,9 @@ body {
 
 .header .container {
     display: flex;
-    margin: auto;
-    width: 90%;
+    width: 95%;
     height: 120px;
-    justify-self: right;
+    justify-content: right;
 }
 
 .containerCadastro {
@@ -160,5 +158,18 @@ input[type="text"]:focus {
     margin-top: 7vh;
     font-size: 200%;
     font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+
+.footer {
+    background-color: black;
+    margin-top: 5%;
+    height: 120px;
+}
+.footer h1{
+    padding-top: 2%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:x-large;
     font-weight: lighter;
 }
