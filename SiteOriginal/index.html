@@ -1,91 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LoveGuy | Início</title>
+    <title>LoveGuy | Cadastro</title>
+
 
     <script src="./js/funcoes.js"></script>
 
+
     <link rel="icon" href="./imagens/whitecross-removebg-preview.png">
-    <link rel="stylesheet" href="./css/Stylehome.css">
+    <link rel="stylesheet" href="./css/StyleCadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link
+    <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"> -->
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- Inicio da nav bar -->
+    <!-- header -->
     <div class="header">
         <div class="header-group">
-            <div class="header-esqueda">
-                <span></span>
-                <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
-            </div>
+            <a href=""><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
             <div class="container">
                 <ul class="navbar">
-                    <span class="espacoApoioEmocional">
-                        <li><a href="./cards.html">usuário</a></li>
-                    </span>
-                    <span class="espacoApoioEmocional">
-                        <li><a href="./metrycs.html">apoio emocional</a></li>
-                    </span>
-                </ul>
-                <span class="palito"></span>
-                <span class="login"><a href="./Login.html">Log-off</a></span>
+                <span class="login"><a href="./Login.html">Login</a></span>
             </div>
         </div>
     </div>
+    <!-- container de login -->
+    <div class="containerCadastro">
+        <div class="titulo">
+            <h1>Faça seu cadastro!</h1>
+        </div><br>
+        <div class="CONTAINERINPUTS">
+            <div class="containerInputs">
+                <input type="text" id="input_nome" placeholder="Nome">
+                <input type="text" id="input_email" placeholder="email">
+                <input type="text" id="input_senha" placeholder="Senha">
 
-    <!-- banner -->
-    <div class="banner">
-        <h1>O universo é a<br> assinatura de<br> Deus</h1>
+            </div>
+
+            <div class="containerInputs2">
+                <input type="text" id="input_livro_favorito" placeholder="Livro favorito da Bíblia">
+                <div class="containerInputs3">
+                    <br>Esse site foi indicado por alguém? Se sim informe o id da pessoa
+                    <input type="text" id="input_indicacao">
+                </div>
+            </div>
+
+            <div class="containerInputs4">
+                <input type="text" id="input_local" placeholder="Local da sua casa no céu">
+                <input type="text" id="input_material" placeholder="Material da sua casa no céu">
+                <input type="text" id="input_carro" placeholder="Carro na garagem da casa no céu">
+            </div>
+        </div>
+        <div class="botaoCadastro">
+            <button onclick="cadastrar(), cadastrar1()">Cadastrar</button>
+        </div>
     </div>
 
-    <!-- Conteúdo da página -->
-    <center>
-        <div class="container3">
-            <div class="imgsPilares">
-                <img src="./imagens/coracao-removebg-preview.png" alt="Amor">
-                <img style="margin-left: 59%; margin-right: 61%;" src="./imagens/handPlanet-removebg-preview.png"
-                    alt="Poder">
-                <img src="./imagens/balança_da_justiça-removebg-preview.png" alt="Justiça">
-            </div>
-            <div class="pilares">
-                <span>
-                    <h1>Deus ama sua<br> criação, e amou<br> tanto que deu<br> seu próprio filho<br> para salvar os<br>
-                        seres humanos.<br>
-                        joão 3:16</h1>
-                </span>
-                <span>
-                    <h1>Criou Deus os<br> céus e a terra,<br> as estrelas, os<br> seres vivos e muito mais.<br>
-                        Gênesis 1</h1>
-                </span>
-                <span>
-                    <h1>Jesus é a<br> encarnação de<br> Deus, e ele era<br> justo. Assim,<br> Deus sempre foi<br> e será
-                        justo.<br>
-                        1 joão 3:8</h1>
-                </span>
-            </div>
-        </div>
-        <div class="texto1">
-            <h1>Veja como o deus bíblico pode se encaixar na visão cósmica do design inteligente através do<br> conteúdo
-                desse website!</h1>
-        </div>
-        <div class="texto2">
-            <h1>Clique na razão áurea abaixo!</h1>
-        </div>
-        <div class="Fibonacci"><a href="./Fibonacci.html"><img src="./imagens/fibbonaci.png" alt="Razão áurea"></a>
-        </div>
-        <div class="footer">
-            <h1>cesar.bmartins@sptech.school<br><img style="width: 20px; height: 20px;"
-                    src="./imagens/telefone-removebg-preview.png">+55 (11) 99205-8813</h1>
-        </div>
-    </center>
+    </div>
+    <!-- <div class="footer">
+        <h1>cesar.bmartins@sptech.school<br><img style="width: 20px; height: 20px;"
+                src="./imagens/telefone-removebg-preview.png">+55 (11) 99205-8813</h1>
+    </div> -->
 </body>
 
 </html>
+
+<script>
+    function cadastrar() {
+
+        // // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_nome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var livroVar = input_livro_favorito.value;
+        var indicadoVar = input_indicacao.value;
+        var novoTestamentoVar = 0
+        var velhoTestamentoVar = 0
+        // var localVar = input_local.value;
+        // var materialVar = input_material.value;
+        // var carroVar = input_carro.value;
+        // Fazer a verificação aqui 
+        /* if (nomeVar == "" || emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            // // finalizar()// aguardar();
+            // return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
+        } */
+
+        if (indicadoVar < 0) {
+            alert('Se não foi indicado por ninguém digite 0 ou nada nesse campo')
+        }
+        else if (nomeVar == "" || emailVar == "" || senhaVar == "" || livroVar == "" || indicadoVar == "") {
+            alert("Preencha os campos vazios")
+        }
+
+        else if (emailVar.indexOf("@") == -1 || emailVar.endsWith(".com") == false) {
+            alert('email inválido')
+
+
+            if (emailVar.indexOf("@") == -1) {
+
+                alert(`Está faltando o @`)
+
+
+            }
+            else if (emailVar.endsWith(".com") == false) {
+
+                alert(`Está faltando o ".com"`)
+
+            }
+
+        }
+
+        else if (!/[!@#\$%\^&\*\(\)\-_\+=\[\]{};':"\\|,.<>\/?]/.test(senhaVar)) { /* O sinal de exclamação ! no início inverte o resultado da verificação*/
+
+            alert(' A senha deve conter pelo menos um caractere especial.')
+
+        }
+
+        else if (!/\d/.test(senhaVar)) {
+            
+            alert('A senha deve conter pelo menos um número')
+        }
+
+        else if (senhaVar.length < 8) {
+
+            alert('Precisa ter ao menos 8 dígitos')
+
+        }
+        else {
+            if (livroVar == 'Mateus' || livroVar == 'Marcos' || livroVar == 'Lucas' || livroVar == 'João' || livroVar == 'Atos' || livroVar == 'Romanos' || livroVar == '1 Coríntios' || livroVar == '2 Coríntios' || livroVar == 'Gálatas' || livroVar == 'Efésios' || livroVar == 'Filipenses' || livroVar == 'Colossenses' || livroVar == '1 Tessalonicenses' || livroVar == '2 Tessalonicenses' || livroVar == 'Hebreus' || livroVar == 'Tiago' || livroVar == '1 Pedro' || livroVar == '2 Pedro' || livroVar == '1 João' || livroVar == '2 João' || livroVar == '3 João' || livroVar == 'Judas' || livroVar == 'Apocalipse') {
+                novoTestamentoVar += 1
+            }
+            else {
+                velhoTestamentoVar += 1
+            }
+            window.location = "index.html"
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                    livroServer: livroVar,
+                    indicadoServer: indicadoVar,
+                    novoTestamentoServer: novoTestamentoVar,
+                    velhoTestamentoServer: velhoTestamentoVar
+                    // localServer: localVar,
+                    // materialServer: materialVar,
+                    // carroServer: carroVar
+                })
+            })
+
+
+            function cadastrar1() {
+                // // aguardar();
+
+                //Recupere o valor da nova input pelo nome do id
+                // Agora vá para o método fetch logo abaixo
+                // var nomeVar = input_nome.value;
+                // var emailVar = input_email.value;
+                // var senhaVar = input_senha.value;
+                // var livroVar = input_livro_favorito.value;
+                // var indicadoVar = input_indicacao.value;
+                var localVar = input_local.value;
+                var materialVar = input_material.value;
+                var carroVar = input_carro.value;
+                // Fazer a verificação aqui 
+                /* if (nomeVar == "" || emailVar == "" || senhaVar == "") {
+                    // cardErro.style.display = "block"
+                    // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        
+                    // // finalizar()// aguardar();
+                    // return false;
+                }
+                else {
+                    // setInterval(sumirMensagem, 5000)
+                } */
+                window.location = "index.html"
+                // Enviando o valor da nova input
+                fetch("/usuarios/cadastrar1", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        // crie um atributo que recebe o valor recuperado aqui
+                        // Agora vá para o arquivo routes/usuario.js
+                        // nomeServer: nomeVar,
+                        // emailServer: emailVar,
+                        // senhaServer: senhaVar,
+                        // livroServer: livroVar,
+                        // indicadoServer: indicadoVar,
+                        localServer: localVar,
+                        materialServer: materialVar,
+                        carroServer: carroVar
+                    })
+                })
+            }
+        }
+
+    }
+
+
+    // .then(function (resposta) {
+
+    //     console.log("resposta: ", resposta);
+
+    //     if (resposta.ok) {
+    //         cardErro.style.display = "block";
+
+    //         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+    //         setTimeout(() => {
+    //             window.location = "login.html";
+    //         }, "2000")
+
+    //         limparFormulario();
+    //         // finalizar()// aguardar();
+    //     } else {
+    //         throw ("Houve um erro ao tentar realizar o cadastro!");
+    //     }
+    // }).catch(function (resposta) {
+    //     console.log(`#ERRO: ${resposta}`);
+    //     // finalizar()// aguardar();
+    // });
+
+    // return false;
+    novoTestamentoVar = 0
+    velhoTestamentoVar = 0
+</script>

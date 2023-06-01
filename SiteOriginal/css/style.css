@@ -1,49 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+a {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  display: flex;
+h1 {
+    margin: 0;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: grey;
+}
+
+
+
+.espacoApoioEmocional{
+    margin-right: 7px;
+}
+
+.banner {
+    background-size: cover;
+    background-image: url(https://tm.ibxk.com.br/2021/04/08/08163059787291.jpg?ims=1120x420);
+    height: 400px;
+}
+
+.banner h1{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: white;
+    text-align: left;
+    position: absolute;
+    left: 77%;
+    top: 24%;
+    font-weight: 400;
+    font-size: 350%;
+}
+
+
+/* BARRA DE NAVEGAÇÃO */
+.navbar {
+    width: 100%;
+    height: auto;
+    justify-content: right;
+    list-style: none;
+    display: flex;
+    margin-right: 4%;
+    margin-top: 2.7%;
+}
+
+.login {
+    width: 5%;
+    height: auto;
+    position: relative;
+    top: 39%;
+    left: -2%;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.cadastro {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 39%;
+    left:-0.7%;
+    display: flex;
+    justify-content: right;
+}
+
+
+.logo {
+    display: flex;
+    width: 60px;
+    height: 70px;
+    margin-top: 26px;
+    justify-content: left;
+    margin-left: 30%;
+}
+
+.palito {
+    background-color: white;
+    position: relative;
+    top: 32%;
+    left: -2.8%;
+    height: 45px;
+    width: 3px;
 }
 
 .header {
-  border-bottom: 3px solid #32b9cd;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header .header-group {
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    margin: 0;
+    display: flex;
 }
 
 .header .container {
-  justify-content: space-between;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 120px;
 }
 
-.header a {
-  text-decoration: none;
-  color: #e3b062;
+.footer {
+    background-color: black;
+    margin-top: 5%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
 }
-
-.agora {
-  font-weight: 800;
-}
-
-.navbar {
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  color: #e3b062;
-}
-
-
-.titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
+.footer h1{
+    padding-top: 2%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:x-large;
+    font-weight: lighter;
 }
 
 
@@ -270,7 +353,8 @@ input {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 .hello {
