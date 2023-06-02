@@ -28,7 +28,8 @@ CREATE TABLE moradas (
     material varchar(150),
     carroGaragem varchar(150)
 );
-
+select sum(novoTestamento) as 'Novo Testamento', sum(velhoTestamento) as 'Velho Testamento'
+                    from usuario;
 desc moradas;
 desc usuario;
 truncate table usuario;

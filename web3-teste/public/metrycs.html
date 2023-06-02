@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./js/funcoes.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleMetrycs.css">
+    <title>LoveGuy | Metrycs</title>
+</head>
+
+<body onload="obterDadosGrafico">
+    <div class="graph">
+        
+    </div>
+    <!-- header -->
+    <!-- <div class="header">
+        <div class="header-group">
+            <div class="header-esqueda">
+                <span></span>
+                <a href="index.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            </div>
+            <div class="container">
+                <span class="navbar">
+                    <a href="./index.html">home</a>
+                    <a href="./cards.html">usuário</a>
+                    <span class="palito"></span>
+                    <a href="./Login.html">Log-off</a>
+                </span>
+            </div>
+        </div>
+    </div> -->
+    <div class="header">
+        <div class="header-group">
+            <div class="header-esqueda">
+                <span></span>
+                <a href="home.html"><img src="./imagens/whitecross-removebg-preview.png" alt="Logo" class="logo"></a>
+            </div>
+            <div class="container">
+                <ul class="navbar">
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./home.html">home</a></li>
+                    </span>
+                    <span class="espacoApoioEmocional">
+                        <li><a href="./dashboard/cards.html">usuário</a></li>
+                    </span>
+                </ul>
+                <span class="palito"></span>
+                <span class="login" onclick="limparSessao()"><a href="">Log-off</a></span>
+            </div>
+        </div>
+
+        <!-- corpo -->
+        <div class="conteudo">
+            <div class="graficos">
+                <div class="graficosEsquerda">
+                    <strong><i>Veja qual é o testamento preferido dos usuários desse site</i></strong>
+                    <div class="graficoBarras">
+                        <canvas id="myChartCanvas"></canvas>
+                    </div>
+
+                </div>
+                <div class="graficosDireita">
+                    <div class="graficoRosca">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <strong><i>O Brasil ainda tem muitos cristãos comparado com o resto do mundo!</i></strong>
+                </div>
+            </div>
+
+            <div class="textoBotao">
+                Abaixo há um botão “Mostrar”, que ao ser clicado será exibido abaixo dele diversos<br> versos biblicos
+                do
+                tema selecionado<br><br><select name="select_tema" id="select_tema">
+                    <option value="amor">Versos sobre amor</option>
+                    <option value="tristeza">Versos sobre tristeza</option>
+                    <option value="coragem">Versos sobre coragem</option>
+                </select><br>
+                <button onclick="mostrarVersos()">Mostrar</button><br>
+                <span class="span_mensagem" id="span_mensagem"></span>
+            </div>
+        </div>
+        <!-- <div class="footer">
+            <h1>cesar.bmartins@sptech.school<br><img style="width: 20px; height: 20px;"
+                    src="./imagens/telefone-removebg-preview.png">+55 (11) 99205-8813</h1>
+        </div> -->
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+window.onload = obterDadosGrafico();
+
+function obterDadosGrafico(){
+    fetch(`/medidas/ultimas/`, {cache: 'no-store'}).then(function(response){
+        if(response.ok){
+            response.json().then(function(resposta){
+                console.log(`Dados recebidos: ${JSON.stringfy(resposta)}}`);
+                resposta.reverse();
+
+                plotarGrafico(resposta);
+            });
+        }
+        else{
+            console.error('Nenhum dado encontrado ou VOCE ERROU NA API');
+        }
+    })
+        .catch(function(error){
+            console.error(`Erro ${error.message}`)
+        })
+}
+
+function plotarGrafico(resposta, idAquario) {
+
+console.log('iniciando plotagem do gráfico...');
+
+// Criando estrutura para plotar gráfico - labels
+let labels = [];
+
+// Criando estrutura para plotar gráfico - dados
+let dados = {
+    labels: labels,
+    datasets: [{
+        label: 'Testamento Preferido',
+        data: [],
+        fill: false,
+        borderColor: '#fff',
+        tension: 0.1
+    }]
+};
+
+console.log('----------------------------------------------')
+console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+console.log(resposta)
+
+// Inserindo valores recebidos em estrutura para plotar o gráfico
+for (i = 0; i < resposta.length; i++) {
+    var registro = resposta[i];
+    labels.push(registro.Novo_Testamento);
+    dados.datasets[0].data.push(registro.Velho_Testamento);
+    // dados.datasets[1].data.push(registro.temperatura);
+}
+
+// console.log('----------------------------------------------')
+// console.log('O gráfico será plotado com os respectivos valores:')
+// console.log('Labels:')
+// console.log(labels)
+// console.log('Dados:')
+// console.log(dados.datasets)
+// console.log('----------------------------------------------')
+
+// Criando estrutura para plotar gráfico - config
+const config = {
+    type: 'bar',
+    data: dados,
+};
+
+// Adicionando gráfico criado em div na tela
+let myChart = new Chart(
+    document.getElementById(`myChartCanvas`),
+    config
+);
+
+// setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+    versosAmor = ['O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta. 1 Coríntios 13:4-7', 'Nem muitas águas conseguemapagar o amor; os rios não conseguem levá-lo na correnteza. Se alguém oferecesse todas as riquezas da sua casa para adquirir o amor, seria totalmente desprezado. Cânticos 8:7']
+    versosTristeza = ['Porque sou eu que conheço os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de causar dano, planos de dar a vocês esperança e um futuro. Jeremias 29:11', 'O Senhor é a minha luz e a minha salvação; de quem terei temor? O Senhor é o meu forte refúgio; de quem terei medo? Salmos 27:1']
+    versosCoragem = ['Sejam fortes e corajosos. Não tenham medo nem fiquem apavorados por causa delas, pois o Senhor, o seu Deus, vai com vocês; nunca os deixará, nunca os abandonará". Deuteronômio 31:6', 'Não fui eu que ordenei a você? Seja forte e corajoso! Não se apavore nem desanime, pois o Senhor, o seu Deus, estará com você por onde você andar". Josué 1:9']
+
+    // function iniciar() {
+    //     fetch(`../Novo/exibir/${novoTestamento}`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     }).
+    //     then((resposta) => {
+    //         console.log(resposta);
+    //         return resposta.json();
+
+    //     })
+    // }
+
+    // const ctx = document.getElementById('myChart');
+
+    // new Chart(ctx, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['Novo Testamento', 'Velho Testamento'],
+    //         datasets: [{
+    //             label: 'Livros preferidos',
+    //             backgroundColor: ['rgb(0, 99, 140)', 'rgb(0, 99, 90)'],
+    //             data: [8, 5, 10],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         indexAxis: 'y',
+    //         scales: {
+    //             y: {
+    //                 beginAtZero: true
+    //             }
+    //         }
+    //     }
+    // });
+
+    const ctx3 = document.getElementById('myChart3');
+
+    new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Cristãos', 'Outras religiões'],
+            datasets: [{
+                backgroundColor: ['rgb(0, 99, 140)', 'rgb(0, 99, 90)'],
+                borderColor: 'rgb(0, 0, 0)',
+                data: [86.8, 15.2],
+                borderWidth: 1
+            }]
+        },
+    });
+
+    function mostrarVersos() {
+        span_mensagem.innerHTML = ''
+
+        var select = select_tema.value
+
+        if (select == 'amor') {
+            for (var contadorAmor = 0; contadorAmor < versosAmor.length; contadorAmor += 1) {
+                span_mensagem.innerHTML += `${contadorAmor + 1}. ${versosAmor[contadorAmor]}<br>`
+            }
+        }
+        else if (select == 'tristeza') {
+            var contadorTristeza = 0
+            while (contadorTristeza < versosTristeza.length) {
+                span_mensagem.innerHTML += `${contadorTristeza + 1}. ${versosTristeza[contadorTristeza]}<br>`
+                contadorTristeza++
+            }
+        }
+        else if (select == 'coragem') {
+            for (var contadorCoragem = 0; contadorCoragem < versosAmor.length; contadorCoragem += 1) {
+                span_mensagem.innerHTML += `${contadorCoragem + 1}. ${versosAmor[contadorCoragem]}<br>`
+            }
+        }
+    }
+
+
+
+    
+    
+</script>
