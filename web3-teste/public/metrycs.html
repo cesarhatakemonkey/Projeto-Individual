@@ -92,24 +92,23 @@
 <script>
 window.onload = obterDadosGrafico();
 
-function obterDadosGrafico(){
-    fetch(`/medidas/ultimas/`, {cache: 'no-store'}).then(function(response){
-        if(response.ok){
-            response.json().then(function(resposta){
-                console.log(`Dados recebidos: ${JSON.stringfy(resposta)}}`);
-                resposta.reverse();
+function obterDadosGrafico() {
+        fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
 
-                plotarGrafico(resposta);
-            });
-        }
-        else{
-            console.error('Nenhum dado encontrado ou VOCE ERROU NA API');
-        }
-    })
-        .catch(function(error){
-            console.error(`Erro ${error.message}`)
+                    plotarGrafico(resposta);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
         })
-}
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
 
 function plotarGrafico(resposta, idAquario) {
 

@@ -18,6 +18,7 @@ function buscarMedidasEmTempoReal() {
     return database.executar(instrucaoSql);
 }
 
+
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal
