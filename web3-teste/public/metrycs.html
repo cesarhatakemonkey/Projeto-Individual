@@ -115,19 +115,20 @@ function plotarGrafico(resposta, idAquario) {
 console.log('iniciando plotagem do gráfico...');
 
 // Criando estrutura para plotar gráfico - labels
-let labels = [];
-
+let labels = ['Velho Testamento', 'Novo Testamento'];
+// 
 // Criando estrutura para plotar gráfico - dados
 let dados = {
     labels: labels,
     datasets: [{
-        label: 'Testamento Preferido',
+        label: 'Velho testamento',
         data: [],
-        fill: false,
+        backgroundColor: ['rgb(0, 99, 140)', 'rgb(0, 99, 90)'],
         borderColor: '#fff',
-        tension: 0.1
+        borderwidth: 1
     }]
 };
+
 
 console.log('----------------------------------------------')
 console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
@@ -136,8 +137,10 @@ console.log(resposta)
 // Inserindo valores recebidos em estrutura para plotar o gráfico
 for (i = 0; i < resposta.length; i++) {
     var registro = resposta[i];
-    labels.push(registro.Novo_Testamento);
+    // labels.push(registro.Novo_Testamento);
+    // labels.push(registro.Velho_Testamento);
     dados.datasets[0].data.push(registro.Velho_Testamento);
+    dados.datasets[0].data.push(registro.Novo_Testamento);
     // dados.datasets[1].data.push(registro.temperatura);
 }
 
