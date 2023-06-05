@@ -46,7 +46,7 @@
                 <input type="number" id="input_X" placeholder="Medida X">
                 <input type="number" id="input_Y" placeholder="Medida Y">
             </div>
-            <div class="botaoCalculo">
+            <div class="botaoCadastro">
                 <button onclick="calcular()">Calcular</button>
             </div>
         </div>
@@ -68,17 +68,17 @@
         var Y = Number(input_Y.value)
 
         if (X < Y) {
-            alert(`A razão áurea é igual a 1,61...! E o resultado é ${X/Y}`)
+            alert(`A razão áurea é igual a 1,61... e o resultado é ${X/Y}, mas algo deve estar errado, verifique as suas medidas!`)
         }
         else {
             if (X / Y > 1.50 && X / Y < 1.61) {
                 alert(`A razão áurea é igual a 1,61... e as suas medidas são ${X / Y}, no mínimo você é belo igual a monaliza!`)
             }
             else if (X / Y > 1.61 || X / Y == 1.61) {
-                alert(`A razão áurea é igual a 1,61, e a sua medida é ${X/Y}`)
+                alert(`A razão áurea é igual a 1,61, e a sua medida é ${X/Y}, que top, suas medidas estão um pouco acima da razão áurea`)
             }
             else if (X / Y < 1.50) {
-                alert(`A razão áurea é igual a 1,61, e sua medida é ${X/Y}`)
+                alert(`A razão áurea é igual a 1,61, e sua medida é ${X/Y}, uau suas medidas ficaram só um pouco abaixo da razão áurea`)
             }
         }
     }

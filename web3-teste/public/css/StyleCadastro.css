@@ -203,17 +203,35 @@ input[type="text"]:focus {
     border-color: grey;
   }
 
+ :root {
+    --cor-primaria-sucess: black;
+    --cor-secundaria-sucess: white;
+    --cor-click-sucess: grey;
+ }
+  
 .botaoCadastro button{
-    background-color: black;
+    background-color: var(--cor-primaria-sucess);
     border-radius: 20px;
     border: none;
-    color: white;
+    color: var(--cor-secundaria-sucess);
     width: 224px;
     height: 57px;
     margin-top: 5vh;
     font-size: 200%;
     font-family: 'Inter', sans-serif;
     font-weight: lighter;
+    cursor: pointer;
+    transition: background 0.8s;
+}
+
+.botaoCadastro:hover button{
+    background-color: var(--cor-secundaria-sucess);
+    color: var(--cor-primaria-sucess);
+}
+
+.botaoCadastro:active button{
+    background-color: var(--cor-click-sucess);
+    color: var(--cor-secundaria-sucess);
 }
 
 .botaoCadastro button ::placeholder{

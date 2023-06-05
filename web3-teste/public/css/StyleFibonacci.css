@@ -168,3 +168,35 @@ body {
     font-size:x-large;
     font-weight: lighter;
 }
+
+
+:root {
+    --cor-primaria-sucess: black;
+    --cor-secundaria-sucess: white;
+    --cor-click-sucess: grey;
+ }
+  
+.botaoCadastro button{
+    background-color: var(--cor-primaria-sucess);
+    border-radius: 20px;
+    border: none;
+    color: var(--cor-secundaria-sucess);
+    width: 224px;
+    height: 57px;
+    margin-top: 5vh;
+    font-size: 200%;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: background 0.8s;
+}
+
+.botaoCadastro:hover button{
+    background-color: var(--cor-secundaria-sucess);
+    color: var(--cor-primaria-sucess);
+}
+
+.botaoCadastro:active button{
+    background-color: var(--cor-click-sucess);
+    color: var(--cor-secundaria-sucess);
+}
