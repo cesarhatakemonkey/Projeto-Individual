@@ -25,13 +25,17 @@ body {
 }
 
 .login {
-    width: 100px;
+    width: 5%;
     height: auto;
     position: relative;
     top: 39%;
-    left: -1.8%;
+    left: -2%;
     display: flex;
     justify-content: right;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+    cursor: pointer;
 }
 
 .cadastro {

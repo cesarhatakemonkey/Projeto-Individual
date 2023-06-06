@@ -61,7 +61,10 @@ body {
     left: -2%;
     display: flex;
     justify-content: right;
-    
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+    cursor: pointer;
 }
 
 .cadastro {

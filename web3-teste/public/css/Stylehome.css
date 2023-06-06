@@ -62,7 +62,10 @@ body {
     left: -2%;
     display: flex;
     justify-content: right;
-    
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+    cursor: pointer;
 }
 
 .cadastro {
@@ -125,7 +128,13 @@ body {
 }
 
 .Fibonacci {
-    margin-top: 2%;
+    margin-top: 10vh;
+}
+
+.Fibonacci :hover img{
+    width: 500px;
+    height: 320px;
+    transition: 0.8s;
 }
 
 .Fibonacci img{
